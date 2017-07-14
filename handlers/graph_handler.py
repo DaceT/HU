@@ -6,7 +6,7 @@ import webapp2
 class GraphHandler(webapp2.RequestHandler):
     def get(self):
         logging.info("GraphHandler")
-         html_params = {
+        html_params = {
             "title": "Fresh Fit",
             "content": ""
         }
