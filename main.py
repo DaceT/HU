@@ -18,3 +18,4 @@ app = webapp2.WSGIApplication([
     ('/history', history_handler.HistoryHandler),
     ('/recommendations', recommend_handler.RecommendHandler),
 ], debug=True)
+
