@@ -16,6 +16,6 @@ app = webapp2.WSGIApplication([
     ('/about', about_handler.AboutHandler),
     ('/graph', graph_handler.GraphHandler),
     ('/history', history_handler.HistoryHandler),
-    ('/recommendations', recommend_handler.RecommendHandler),
+    ('/recommend', recommend_handler.RecommendHandler),
 ], debug=True)
 

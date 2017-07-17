@@ -1,4 +1,9 @@
 body {
-	background-image: url(""); 
+	background-color: lightblue;
 	font-family: sans-serif;
+}
+body {
+    background-image: url(https://media.licdn.com/mpr/mpr/shrink_200_200/AAEAAQAAAAAAAAQ0AAAAJDU2MGRkNzEyLWYyNzUtNDE1ZC1hOWEzLWJkZTIyMmNmMWNmNg.png);
+    background-repeat: repeat-y;
+    background-color: #cce0f1;
 }
