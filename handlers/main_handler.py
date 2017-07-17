@@ -12,3 +12,4 @@ class MainHandler(webapp2.RequestHandler):
         }
         template = jinja_env.env.get_template('templates/tmpl.html')
         self.response.out.write(template.render(html_params))
+        
