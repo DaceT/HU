@@ -12,3 +12,4 @@ class HistoryHandler(webapp2.RequestHandler):
         }
         template = jinja_env.env.get_template('templates/history.html')
         self.response.out.write(template.render(html_params))
+ 
