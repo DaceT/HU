@@ -14,6 +14,7 @@ class MainHandler(webapp2.RequestHandler):
         }
         template = jinja_env.env.get_template('templates/tmpl.html')
         self.response.out.write(template.render(html_params))
+<<<<<<< HEAD
     def post(self):
     	logging.info("There was a post.")
     	r_breakfast=self.request.get("form_breakfast")
@@ -35,3 +36,6 @@ class MainHandler(webapp2.RequestHandler):
     		)
     	new_food.put()
     	self.redirect("/recommend")
+=======
+        
+>>>>>>> ad11d68c97d66c30123b1db5ca6f95674cb9482e
