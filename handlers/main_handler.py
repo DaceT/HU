@@ -3,6 +3,8 @@ import jinja_env
 import logging
 import webapp2
 
+# from [folder] immprt [file]
+from models import food_log 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
         logging.info("MainHandler")
@@ -21,3 +23,15 @@ class MainHandler(webapp2.RequestHandler):
     	r_lunch_calories=self.request.get("lunch_calories")
     	r_dinner_calories=self.request.get("dinner_calories")
 
+    	new_food=food_log.FoodModel(
+    		Breakfast=r_breakfast,
+    		Lunch=r_lunch,
+    		Dinner=r_dinner,
+    		BreakfastCal=r_brkfst_calories,
+    		LunchCal=r_breakfast,
+    		DinnerCal=r_lunch,
+
+
+    		)
+    	new_food.put()
+    	self.redirect("/recommend")
