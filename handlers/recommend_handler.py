@@ -17,5 +17,6 @@ class RecommendHandler(webapp2.RequestHandler):
 		totalcal=food.BreakfastCal + food.LunchCal + food.DinnerCal
 		logging.info("THIS CHECKS THAT MATH IS WORKING")
 		logging.info(totalcal)
-		if totalcal >= 
+		#if totalcal >= 2600 &&
+
 	 
