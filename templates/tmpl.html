@@ -16,20 +16,66 @@
 <body>
 </br>
 <font size="6">
+<div class="navbar">
+<ul>
+<li><a href='/about'></a>About</li>
+<li><a href='/recommend'></a>Recommendations</li>
+<li><a href='/graph'></a>Graph</li>
+<li><a href='/history'></a>History</li>
+</ul>
+</div>
+<!-- <center> -->
+
+<form method="POST">
 <center>
-<input type=button value= Login></input>
-<a href='/about'><button type="button" id="about">About</button></a>
+Food Log
+<br>
+What did you eat for breakfast? 
+<input name="form_breakfast">
+<br>
+Calories 
 
-<a href='/recommend'><button type="button" id="recommendations">Recommendations</button></a>
+<input list= "Calories">
+	<datalist id="Calories">
+		<option value=500-1000>
+		<option value=1001-2000>
+		<option value=2001-3000>
+    </datalist>
 
-<a href='/graph'><button type="button" id="Graph">Graph</button></a>
 
-<a href='/history'><button type="button" id="History">History</button></a>
+
+<br>
+What did you eat for lunch?
+<input name="form_lunch">
+<br>
+
+Calories
+<input list= "Calories">
+	<datalist id="Calories">
+		<option value=500-1000>
+		<option value=1001-2000>
+		<option value=2001-3000>
+    </datalist>
+
+<br>
+What did you eat for dinner?
+<input name="form_dinner">
+<br>
+
+Calories
+<input list= "Calories">
+	<datalist id="Calories">
+		<option value=500-1000>
+		<option value=1001-2000>
+		<option value=2001-3000>
+    </datalist>
+<br>
+<input type="submit">
 </center>
+</form>
+<!-- </center> -->
+
 </font>
-<h1>Welcome to Fresh Fit</h1>
-<font size="12">
-</font>
-<h2>Here to Ensure you avoid the Freshman Fifteen and Stay Fit!</h2>
 </body>
+
 </html>

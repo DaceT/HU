@@ -1,9 +1,22 @@
 body {
-<<<<<<< HEAD
-	background-image: url("http://wallpapercave.com/wp/WV8QiL1.jpg"); 
+	background-image: url("https://image.shutterstock.com/z/stock-photo-healthy-food-background-studio-photo-of-different-fruits-and-vegetables-on-wooden-table-233040343.jpg"); ;
 
-=======
-	background-image: url("http://ermirali.com/wp-content/uploads/2015/04/diet-food-on-a-plate-hd-wallpaper-840x200.jpg");
->>>>>>> ad11d68c97d66c30123b1db5ca6f95674cb9482e
-	font-family: sans-serif;
+	font-family: sans-serif;}
+.navbar {
+
+}
+.navbar ul {
+	list-style-type:none;
+	overflow: hidden;
+	text-align:center;
+	background: lightgrey;
+}
+.navbar li{ 
+font-family: "verdana";
+display: inline-block;
+font-size:18px;
+padding:15px;
+
+
+>>>>>>> cf420535c6d9ad6faef50df5fc3129c3f0b9c41c
 }
