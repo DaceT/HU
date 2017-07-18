@@ -19,11 +19,12 @@ class MainHandler(webapp2.RequestHandler):
     	r_breakfast=self.request.get("form_breakfast")
     	r_lunch=self.request.get("form_lunch")
     	r_dinner=self.request.get("form_dinner")
-    	r_brkfst_calories=self.request.get("brkfst_calories")
-    	r_lunch_calories=self.request.get("lunch_calories")
-    	r_dinner_calories=self.request.get("dinner_calories")
-    	#r_user=self.request.get("user_name")
-    	#r_date=self.request.get("date")
+    	r_brkfst_calories=float(self.request.get("brkfst_calories"))
+    	r_lunch_calories=float(self.request.get("lunch_calories"))
+    	r_dinner_calories=float(self.request.get("dinner_calories"))
+    	r_user=self.request.get("user_name")
+    	r_date=self.request.get("date")
+
 
     	logging.info("CHECK LOGGING!!!!!!!!!!!!!!!!")
     	logging.info(r_dinner_calories)
@@ -36,8 +37,8 @@ class MainHandler(webapp2.RequestHandler):
     		BreakfastCal=r_brkfst_calories,
     		LunchCal=r_lunch_calories,
     		DinnerCal=r_dinner_calories,
-    		#User=r_user,
-    		#Date=r_date,
+    		User=r_user,
+    		Date=r_date,
     		)
     	new_food.put()
     	self.redirect("/recommend")

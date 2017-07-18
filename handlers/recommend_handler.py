@@ -15,5 +15,7 @@ class RecommendHandler(webapp2.RequestHandler):
 		self.response.out.write(template.render(html_params))
 		food =food_log.FoodModel.query().get()
 		totalcal=food.BreakfastCal + food.LunchCal + food.DinnerCal
+		logging.info("THIS CHECKS THAT MATH IS WORKING")
 		logging.info(totalcal)
+		if totalcal >= 
 	 
