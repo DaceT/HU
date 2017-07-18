@@ -2,6 +2,7 @@
 import jinja_env
 import logging
 import webapp2
+from google.appengine.api import users
 
 # from [folder] immprt [file]
 from models import food_log 
@@ -10,7 +11,7 @@ class MainHandler(webapp2.RequestHandler):
         logging.info("MainHandler")
         html_params = {
             "title": "Fresh Fit",
-            "content": ""
+            "html_login_url": users.create_login_url('/about'),
         }
         template = jinja_env.env.get_template('templates/tmpl.html')
         self.response.out.write(template.render(html_params))

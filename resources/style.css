@@ -1,7 +1,11 @@
 body {
 	background-image: url("https://image.shutterstock.com/z/stock-photo-healthy-food-background-studio-photo-of-different-fruits-and-vegetables-on-wooden-table-233040343.jpg"); ;
 	font-family: sans-serif;}
-
+.popup {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
 .navbar {
 
 }
