@@ -5,6 +5,8 @@ body {
     position: relative;
     display: inline-block;
     cursor: pointer;
+    background-color: #555;
+
 }
 .navbar {
 
