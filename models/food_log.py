@@ -7,5 +7,6 @@ class FoodModel(ndb.Model):
     BreakfastCal = ndb.FloatProperty()
     LunchCal = ndb.FloatProperty()
     DinnerCal = ndb.FloatProperty()
-    #User=ndb.StringProperty()
-    #Date=ndb.FloatProperty()
+    User=ndb.StringProperty()
+    Date=ndb.FloatProperty()
+    Sex=ndb.StringProperty()
