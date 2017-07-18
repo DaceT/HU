@@ -8,7 +8,8 @@ class GraphHandler(webapp2.RequestHandler):
         logging.info("GraphHandler")
         html_params = {
             "title": "Fresh Fit",
-            "content": ""
+            "content": "",
+            
         }
         template = jinja_env.env.get_template('templates/graph.html')
         self.response.out.write(template.render(html_params))

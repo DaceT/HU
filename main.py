@@ -11,6 +11,7 @@ from handlers import recommend_handler
 
 jinja_env.init(os.path.dirname(__file__))
 
+
 app = webapp2.WSGIApplication([
     ('/', main_handler.MainHandler),
     ('/about', about_handler.AboutHandler),
