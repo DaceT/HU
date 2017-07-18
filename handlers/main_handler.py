@@ -23,16 +23,23 @@ class MainHandler(webapp2.RequestHandler):
     	r_brkfst_calories=self.request.get("brkfst_calories")
     	r_lunch_calories=self.request.get("lunch_calories")
     	r_dinner_calories=self.request.get("dinner_calories")
+    	#r_user=self.request.get("user_name")
+    	#r_date=self.request.get("date")
+
+    	logging.info("CHECK LOGGING!!!!!!!!!!!!!!!!")
+    	logging.info(r_dinner_calories)
+
 
     	new_food=food_log.FoodModel(
     		Breakfast=r_breakfast,
     		Lunch=r_lunch,
     		Dinner=r_dinner,
     		BreakfastCal=r_brkfst_calories,
-    		LunchCal=r_breakfast,
-    		DinnerCal=r_lunch,
-
-
+    		LunchCal=r_lunch_calories,
+    		DinnerCal=r_dinner_calories,
+    		#User=r_user,
+    		#Date=r_date,
     		)
     	new_food.put()
     	self.redirect("/recommend")
+
