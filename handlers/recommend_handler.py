@@ -12,7 +12,10 @@ class RecommendHandler(webapp2.RequestHandler):
 		logging.info("RecommendHandler")
 		html_params = {
 			"title": "Fresh Fit",
-			"content": ""
+			"content": "",
+			"html":"",
+			"": "",
+			"": "",
 		}
 		template = jinja_env.env.get_template('templates/recommend.html')
 		self.response.out.write(template.render(html_params))
@@ -22,14 +25,14 @@ class RecommendHandler(webapp2.RequestHandler):
 		logging.info(totalcal)
 
 		if totalcal <= 2600:
-			<img src= "http://blogs.plos.org/obesitypanacea/files/2015/10/tv2-480x320.jpg">
+			<img src = {{ }}>
 
 		if 2600 > totalcal < 3000:
-			<img src= "https://s-media-cache-ak0.pinimg.com/originals/44/9e/10/449e10c78b919db9e9d7606c877e80ee.jpg">
+			<img src = "https://s-media-cache-ak0.pinimg.com/originals/44/9e/10/449e10c78b919db9e9d7606c877e80ee.jpg">
 
 
 		if totalcal <= 3000:
-			<img src= "https://www.healthykids.nsw.gov.au/downloads/header/header_SR_SoccerKick_cb97_header.jpg">
+			<img src = "https://www.healthykids.nsw.gov.au/downloads/header/header_SR_SoccerKick_cb97_header.jpg">
 		
 
 	 
