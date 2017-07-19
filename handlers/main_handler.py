@@ -22,7 +22,6 @@ class MainHandler(webapp2.RequestHandler):
         if user == None:
             self.redirect("/")
             return
-    	logging.info("There was a post.")
     	r_breakfast=self.request.get("form_breakfast")
     	r_lunch=self.request.get("form_lunch")
     	r_dinner=self.request.get("form_dinner")

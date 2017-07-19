@@ -8,19 +8,5 @@ body {
     background-color: #555;
 
 }
-.navbar {
 
-}
-.navbar ul {
-	list-style-type:none;
-	overflow: hidden;
-	text-align:center;
-	background: lightgrey;
-}
-.navbar li{ 
-font-family: "verdana";
-display: inline-block;
-font-size:18px;
-padding:15px;
 
-}
