@@ -4,6 +4,8 @@ import jinja_env
 import logging
 import webapp2
 from models import food_log
+from google.appengine.ext import ndb
+from google.appengine.api import users
 
 class RecommendHandler(webapp2.RequestHandler):
 	def get(self):

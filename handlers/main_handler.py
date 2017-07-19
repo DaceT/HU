@@ -5,6 +5,8 @@ import webapp2
 from google.appengine.api import users
 
 # from [folder] immprt [file]
+from google.appengine.ext import ndb
+from google.appengine.api import users
 from models import food_log 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
@@ -30,6 +32,11 @@ class MainHandler(webapp2.RequestHandler):
 
     	logging.info("CHECK LOGGING!!!!!!!!!!!!!!!!")
     	logging.info(r_dinner_calories)
+
+    	henry = {
+            "html_comments": comment_str,
+            "html_login_url": users.create_login_url('/other'),
+        }
 
     	
     	new_food=food_log.FoodModel(
