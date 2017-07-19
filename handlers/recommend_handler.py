@@ -9,24 +9,25 @@ from google.appengine.api import users
 
 class RecommendHandler(webapp2.RequestHandler):
 	def get(self):
+		r_b_cal=self.request.get("brkfst_calories")
+		r_l_cal=self.request.get("lunch_calories")
+		r_d_cal=self.request.get("dinner_calories")
+		totalcal =float(r_b_cal) +float(r_l_cal) +float(r_d_cal)
+		logging.info(totalcal)
 		logging.info("RecommendHandler")
 		html_params = {
 			"title": "Fresh Fit",
 			"content": "",
+			"totalCal":totalcal
 			}
 		template = jinja_env.env.get_template('templates/recommend.html')
-		self.response.out.write(template.render(html_params))
-		food =food_log.FoodModel.query().get()
-		totalcal=food.BreakfastCal + food.LunchCal + food.DinnerCal
-		logging.info("THIS CHECKS THAT MATH IS WORKING")
-		logging.info(totalcal)
 
 		if totalcal <= 2600:
-			html_params ["imageurl"]= "https://static1.squarespace.com/static/503264b0e4b0dbdecd41e3f6/t/590a05131e5b6ce08768b593/1493828890055/polaroid2.png"
-		if 2600 > totalcal < 3000:
-			html_params ["imageurl"]= "https://s-media-cache-ak0.pinimg.com/originals/44/9e/10/449e10c78b919db9e9d7606c877e80ee.jpg"
-		if totalcal <= 3000:
-			html_params ["imageurl"] = "https://www.healthykids.nsw.gov.au/downloads/header/header_SR_SoccerKick_cb97_header.jpg"
+			html_params ["imageurl"]= "http://hipnewjersey.com/wp-content/uploads/2017/06/istock-499609170-1.jpg"
+		elif totalcal < 3000:
+			html_params ["imageurl"]= "https://squashskills.com/images/sized/1400x660/1063618794-poi824.290-qx100.png"
+		elif totalcal >= 3000:
+			html_params ["imageurl"] = "http://www.blakedating.com/wp-content/uploads/2016/11/Gym-Course.jpg"
 		
+		self.response.out.write(template.render(html_params))
 
-	 
