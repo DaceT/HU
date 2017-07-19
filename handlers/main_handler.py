@@ -1,4 +1,4 @@
-
+import time
 import jinja_env
 import logging
 import webapp2
@@ -18,6 +18,10 @@ class MainHandler(webapp2.RequestHandler):
         template = jinja_env.env.get_template('templates/tmpl.html')
         self.response.out.write(template.render(html_params))
     def post(self):
+        user = users.get_current_user()
+        if user == None:
+            self.redirect("/")
+            return
     	logging.info("There was a post.")
     	r_breakfast=self.request.get("form_breakfast")
     	r_lunch=self.request.get("form_lunch")
@@ -25,18 +29,7 @@ class MainHandler(webapp2.RequestHandler):
     	r_brkfst_calories=float(self.request.get("brkfst_calories"))
     	r_lunch_calories=float(self.request.get("lunch_calories"))
     	r_dinner_calories=float(self.request.get("dinner_calories"))
-    	r_user=self.request.get("form_user")
-    	r_date=self.request.get("form_date")
     	r_sex=self.request.get("form_sex")
-
-
-    	logging.info("CHECK LOGGING!!!!!!!!!!!!!!!!")
-    	logging.info(r_dinner_calories)
-
-    	henry = {
-            "html_comments": comment_str,
-            "html_login_url": users.create_login_url('/other'),
-        }
 
     	
     	new_food=food_log.FoodModel(
@@ -46,10 +39,10 @@ class MainHandler(webapp2.RequestHandler):
     		BreakfastCal=r_brkfst_calories,
     		LunchCal=r_lunch_calories,
     		DinnerCal=r_dinner_calories,
-    		User=r_user,
-    		Date=r_date,
+    		User=user.email(),
     		Sex=r_sex,
     		)
     	new_food.put()
+        time.sleep(1)
     	self.redirect("/recommend")
 

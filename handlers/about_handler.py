@@ -13,3 +13,4 @@ class AboutHandler(webapp2.RequestHandler):
         }
         template = jinja_env.env.get_template('templates/about.html')
         self.response.out.write(template.render(html_params))
+

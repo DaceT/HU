@@ -8,5 +8,5 @@ class FoodModel(ndb.Model):
     LunchCal = ndb.FloatProperty()
     DinnerCal = ndb.FloatProperty()
     User=ndb.StringProperty()
-    Date=ndb.FloatProperty()
+    Date=ndb.DateProperty(auto_now_add= True)
     Sex=ndb.StringProperty()
