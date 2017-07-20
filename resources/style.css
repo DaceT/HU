@@ -1,12 +1,13 @@
 body {
-	background-color:lightcyan ; ;
-	font-family: sans-serif;}
+	background-image: url(http://healthynestnutrition.com/wp-content/uploads/2014/02/HealthyNest.website.background-02-copy1-e1432936569353.jpg);
+	/*background-color: lightcyan; */
+	font-family: sans-serif;
+}
 .popup {
     position: relative;
     display: inline-block;
     cursor: pointer;
     background-color: #555;
-
 }
 
 
