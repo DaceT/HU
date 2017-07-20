@@ -1,5 +1,18 @@
 body {
 	background-color: lightgreen; 
-
+	text-align: center;
 	font-family: sans-serif;
+}
+
+.pics{
+	width:400px;
+	margin:auto;
+	display: block;
+
+
+}
+
+.info{
+	text-align:center;
+
 }
